@@ -3,10 +3,19 @@
 ## Overview
 This little Go program first loads an SIP (Session Initiation Protocol) registrations data file. Then it exposes the data via a REST API.
 
+## Installation and usage
+
+1. Clone this repository to your desktop
+2. If you have docker/docker-compose, then at the root of the repo write in a terminal : `docker-compose up` go to step #
+3. If you do not have docker installed
+4. Run these commands (at the root of the repo): `go get -d -v ./...` and `go install -v ./...` and `go build` then finally `./{CHANGE_FOR_NAME_OF_THE_REPO}`
+5. Open up a browser or an HTTP client (Postman, Insomnia, etc.)
+6. Hit the endpoint `http://localhost/aoc/{addressOfRecord}`
+
 ## Endpoints
 
 ```go
-GET /aor/:addressOfRecord
+GET /aor/{addressOfRecord}
 ```
 This returns the following JSON data:
 

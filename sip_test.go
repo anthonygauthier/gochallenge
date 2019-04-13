@@ -21,6 +21,6 @@ func TestLoadRegs(t *testing.T) {
 func TestLoadRegsNoFile(t *testing.T) {
 	r := loadRegs("test")
 	if r != nil {
-		t.Error("Program should have crashed when loading non-existent file.")
+		t.Error("Registrations slice should be empty when file doesn't exist.")
 	}
 }
