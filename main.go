@@ -22,8 +22,8 @@ func main() {
 
 	router.HandleFunc("/aor/{address}", r.getSIPHandler).Methods("GET")
 
-	fmt.Printf("Starting server on port %s\n", port)
-	log.Fatal(http.ListenAndServe(":80", router))
+	fmt.Printf("Starting API on port %s\n", port)
+	log.Fatal(http.ListenAndServe(port, router))
 }
 
 func (rh registrationHandler) getSIPHandler(w http.ResponseWriter, r *http.Request) {
